@@ -19,11 +19,13 @@ steps:
     image: node:alpine
     commands:
       - npm test
-  # - name: publish
-  #   image: plugins/github-release
-  #   settings:
-  #     api_key: from_secret: github-token
-  #     files: *
+  - name: publish
+    image: plugins/github-release
+    settings:
+      api_key: from_secret: github-token
+      files: *
+    when:
+      event: tag
   - name: slack
     image: plugins/slack
     settings:
