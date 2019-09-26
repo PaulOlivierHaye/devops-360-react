@@ -27,6 +27,6 @@ steps:
   - name: slack
     image: plugins/slack
     settings:
-      webhook: https://hooks.slack.com/services/TNETK03M2/GNRTTRBBJ
+      webhook: https://hooks.slack.com/services/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
       channel: drone-polo
       username: drone-CI
